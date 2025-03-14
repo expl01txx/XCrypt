@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>D:\cpplibs\spdlog-1.15.1\include;D:\cpplibs\LIEF-0.16.2-win64\include;D:\cpplibs\libasmjit;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\cpplibs\spdlog-1.15.1\Release;D:\cpplibs\libasmjit\lib;D:\cpplibs\LIEF-0.16.2-win64\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\cpplibs\capstone-6.0.0-Alpha3\include;D:\cpplibs\spdlog-1.15.1\include;D:\cpplibs\LIEF-0.16.2-win64\include;D:\cpplibs\libasmjit;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\cpplibs\capstone-6.0.0-Alpha3;D:\cpplibs\libasmjit\lib;D:\cpplibs\LIEF-0.16.2-win64\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -134,7 +134,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="trashgen.h" />
     <ClCompile Include="XCrypt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="codegen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
